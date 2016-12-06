@@ -1,13 +1,18 @@
 body {
+  font-family: Helvetica;
+  text-align: center;
   color: #990000; }
 
-button {
+.string {
   background-color: #808080;
-  margin-top: 50px;
-  padding: 2px 100%;
+  margin-top: 40px;
+  padding: 1px 100%;
   border: none;
   display: inline-block;
   cursor: pointer;
   length: 100%; }
+
+li {
+  list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

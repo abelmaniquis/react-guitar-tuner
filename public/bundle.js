@@ -95,18 +95,46 @@
 	                null,
 	                _react2.default.createElement(
 	                    'h1',
-	                    null,
+	                    { className: 'title' },
 	                    'Guitar Tuner'
 	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'fretboard' },
-	                    _react2.default.createElement(_GuitarString2.default, { note: "1-E", isPlaying: false }),
-	                    _react2.default.createElement(_GuitarString2.default, { note: "2-B", isPlaying: false }),
-	                    _react2.default.createElement(_GuitarString2.default, { note: "3-G", isPlaying: false }),
-	                    _react2.default.createElement(_GuitarString2.default, { note: "4-D", isPlaying: false }),
-	                    _react2.default.createElement(_GuitarString2.default, { note: "5-A", isPlaying: false }),
-	                    _react2.default.createElement(_GuitarString2.default, { note: "6-E", isPlaying: false })
+	                    _react2.default.createElement(
+	                        'ul',
+	                        null,
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_GuitarString2.default, { note: "1-E", isPlaying: false })
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_GuitarString2.default, { note: "2-B", isPlaying: false })
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_GuitarString2.default, { note: "3-G", isPlaying: false })
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_GuitarString2.default, { note: "4-D", isPlaying: false })
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_GuitarString2.default, { note: "5-A", isPlaying: false })
+	                        ),
+	                        _react2.default.createElement(
+	                            'li',
+	                            null,
+	                            _react2.default.createElement(_GuitarString2.default, { note: "6-E", isPlaying: false })
+	                        )
+	                    )
 	                )
 	            );
 	        }
@@ -23299,7 +23327,7 @@
 	                _react2.default.createElement(
 	                    'form',
 	                    { onSubmit: this.playNote },
-	                    _react2.default.createElement('button', null)
+	                    _react2.default.createElement('button', { className: 'string' })
 	                ),
 	                _react2.default.createElement(_reactSound2.default, { className: this.props.note,
 	                    url: 'https://www.electricherald.com/tuner/' + this.props.note + '.mp3',

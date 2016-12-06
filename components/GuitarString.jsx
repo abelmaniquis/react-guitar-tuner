@@ -29,7 +29,7 @@ class GuitarString extends React.Component{
         return(
             <div>
             <form onSubmit={this.playNote}>
-                <button/>
+                <button className="string"/>
             </form>
             
             <Sound className={this.props.note}

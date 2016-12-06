@@ -21,14 +21,16 @@ class App extends React.Component{
     render(){
         return(
         <div>
-        <h1>Guitar Tuner</h1>
+        <h1 className="title">Guitar Tuner</h1>
             <div className= "fretboard">
-                <GuitarString note={"1-E"} isPlaying={false} />
-                <GuitarString note={"2-B"} isPlaying={false}/>
-                <GuitarString note={"3-G"} isPlaying={false}/>
-                <GuitarString note={"4-D"} isPlaying={false}/>
-                <GuitarString note={"5-A"} isPlaying={false}/>
-                <GuitarString note={"6-E"} isPlaying={false}/>
+            <ul>
+                <li><GuitarString note={"1-E"} isPlaying={false} /></li>
+                <li><GuitarString note={"2-B"} isPlaying={false}/></li>
+                <li><GuitarString note={"3-G"} isPlaying={false}/></li>
+                <li><GuitarString note={"4-D"} isPlaying={false}/></li>
+                <li><GuitarString note={"5-A"} isPlaying={false}/></li>
+                <li><GuitarString note={"6-E"} isPlaying={false}/></li>
+            </ul>
             </div>
         </div>
         )
