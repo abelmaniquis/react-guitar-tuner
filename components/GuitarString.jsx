@@ -7,7 +7,6 @@ class GuitarString extends React.Component{
         this.state={
          playing:this.props.isPlaying  
         }
-        
         this.playNote = this.playNote.bind(this)
     }
     playNote(e){
@@ -30,19 +29,13 @@ class GuitarString extends React.Component{
         return(
             <div>
             <form onSubmit={this.playNote}>
-                <button>{this.props.note}</button>
+                <button/>
             </form>
             
             <Sound className={this.props.note}
             url={`https://www.electricherald.com/tuner/${this.props.note}.mp3`}
             playStatus={playStatus}
-            
-            onLoading={this.handleSongLoading}
-            onPlaying={this.handleSongPlaying}
-            
             />
-            
-            
             </div>
         )
     }

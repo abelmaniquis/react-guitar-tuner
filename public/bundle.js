@@ -60,10 +60,6 @@
 
 	var _reactSound2 = _interopRequireDefault(_reactSound);
 
-	var _Tones = __webpack_require__(183);
-
-	var _Tones2 = _interopRequireDefault(_Tones);
-
 	var _GuitarString = __webpack_require__(189);
 
 	var _GuitarString2 = _interopRequireDefault(_GuitarString);
@@ -102,12 +98,16 @@
 	                    null,
 	                    'Guitar Tuner'
 	                ),
-	                _react2.default.createElement(_GuitarString2.default, { note: "1-E", isPlaying: false }),
-	                _react2.default.createElement(_GuitarString2.default, { note: "2-B", isPlaying: false }),
-	                _react2.default.createElement(_GuitarString2.default, { note: "3-G", isPlaying: false }),
-	                _react2.default.createElement(_GuitarString2.default, { note: "4-D", isPlaying: false }),
-	                _react2.default.createElement(_GuitarString2.default, { note: "5-A", isPlaying: false }),
-	                _react2.default.createElement(_GuitarString2.default, { note: "6-E", isPlaying: false })
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'fretboard' },
+	                    _react2.default.createElement(_GuitarString2.default, { note: "1-E", isPlaying: false }),
+	                    _react2.default.createElement(_GuitarString2.default, { note: "2-B", isPlaying: false }),
+	                    _react2.default.createElement(_GuitarString2.default, { note: "3-G", isPlaying: false }),
+	                    _react2.default.createElement(_GuitarString2.default, { note: "4-D", isPlaying: false }),
+	                    _react2.default.createElement(_GuitarString2.default, { note: "5-A", isPlaying: false }),
+	                    _react2.default.createElement(_GuitarString2.default, { note: "6-E", isPlaying: false })
+	                )
 	            );
 	        }
 	    }]);
@@ -21850,83 +21850,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 183 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(32);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _reactSound = __webpack_require__(184);
-
-	var _reactSound2 = _interopRequireDefault(_reactSound);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Tones = function (_React$Component) {
-	    _inherits(Tones, _React$Component);
-
-	    function Tones(props) {
-	        _classCallCheck(this, Tones);
-
-	        var _this = _possibleConstructorReturn(this, (Tones.__proto__ || Object.getPrototypeOf(Tones)).call(this, props));
-
-	        _this.state = {
-	            playing: "Sound.status.PLAYING"
-	        };
-
-	        return _this;
-	    }
-
-	    _createClass(Tones, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'audiocontainer' },
-	                _react2.default.createElement(_reactSound2.default, {
-	                    url: 'https://www.electricherald.com/tuner/1-E.mp3',
-	                    playStatus: "Sound.status.Playing",
-	                    playFromPosition: 300,
-	                    onLoading: console.log("LOADING LOADING LOADING!"),
-	                    onPlaying: console.log("PLAYING PLAYING PLAYING!"),
-	                    onFinishedPlaying: console.log("finished playing")
-	                })
-	            );
-	        }
-	    }]);
-
-	    return Tones;
-	}(_react2.default.Component);
-
-	module.exports = Tones;
-
-	/*
-	notes:
-
-	https://www.electricherald.com/tuner/1-E.mp3
-	https://www.electricherald.com/tuner/2-B.mp3
-	https://www.electricherald.com/tuner/3-G.mp3
-	https://www.electricherald.com/tuner/4-D.mp3
-	https://www.electricherald.com/tuner/5-A.mp3
-	https://www.electricherald.com/tuner/6-E.mp3
-	*/
-
-/***/ },
+/* 183 */,
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -23344,7 +23268,6 @@
 	        _this.state = {
 	            playing: _this.props.isPlaying
 	        };
-
 	        _this.playNote = _this.playNote.bind(_this);
 	        return _this;
 	    }
@@ -23376,19 +23299,11 @@
 	                _react2.default.createElement(
 	                    'form',
 	                    { onSubmit: this.playNote },
-	                    _react2.default.createElement(
-	                        'button',
-	                        null,
-	                        this.props.note
-	                    )
+	                    _react2.default.createElement('button', null)
 	                ),
 	                _react2.default.createElement(_reactSound2.default, { className: this.props.note,
 	                    url: 'https://www.electricherald.com/tuner/' + this.props.note + '.mp3',
-	                    playStatus: playStatus,
-
-	                    onLoading: this.handleSongLoading,
-	                    onPlaying: this.handleSongPlaying
-
+	                    playStatus: playStatus
 	                })
 	            );
 	        }

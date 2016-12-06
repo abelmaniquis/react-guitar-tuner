@@ -1,4 +1,13 @@
 body {
-  color: red; }
+  color: #990000; }
+
+button {
+  background-color: #808080;
+  margin-top: 50px;
+  padding: 2px 100%;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  length: 100%; }
 
 /*# sourceMappingURL=style.css.map */

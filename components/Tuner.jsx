@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Sound from 'react-sound';
-import Tones from './Tones.jsx';
 import GuitarString from './GuitarString.jsx';
 
 class App extends React.Component{
@@ -23,12 +22,14 @@ class App extends React.Component{
         return(
         <div>
         <h1>Guitar Tuner</h1>
-            <GuitarString note={"1-E"} isPlaying={false} />
-            <GuitarString note={"2-B"} isPlaying={false}/>
-            <GuitarString note={"3-G"} isPlaying={false}/>
-            <GuitarString note={"4-D"} isPlaying={false}/>
-            <GuitarString note={"5-A"} isPlaying={false}/>
-            <GuitarString note={"6-E"} isPlaying={false}/>
+            <div className= "fretboard">
+                <GuitarString note={"1-E"} isPlaying={false} />
+                <GuitarString note={"2-B"} isPlaying={false}/>
+                <GuitarString note={"3-G"} isPlaying={false}/>
+                <GuitarString note={"4-D"} isPlaying={false}/>
+                <GuitarString note={"5-A"} isPlaying={false}/>
+                <GuitarString note={"6-E"} isPlaying={false}/>
+            </div>
         </div>
         )
     }
