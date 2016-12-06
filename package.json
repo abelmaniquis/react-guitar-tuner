@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch-sass": "sass --watch public/style.sass",
+    "watch": "webpack --watch && sass --watch public/style.sass"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "babel-register": "^6.18.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-sound": "^0.5.2",
     "webpack": "^1.13.3"
   }
 }
