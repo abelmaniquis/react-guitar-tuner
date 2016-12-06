@@ -64,6 +64,10 @@
 
 	var _Tones2 = _interopRequireDefault(_Tones);
 
+	var _GuitarString = __webpack_require__(189);
+
+	var _GuitarString2 = _interopRequireDefault(_GuitarString);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -81,12 +85,8 @@
 	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
 	        _this.state = {
-	            e1: "https://www.electricherald.com/tuner/1-E.mp3",
-	            b2: "https://www.electricherald.com/tuner/2-B.mp3",
-	            g3: "https://www.electricherald.com/tuner/3-G.mp3",
-	            d4: "https://www.electricherald.com/tuner/4-D.mp3",
-	            a5: "https://www.electricherald.com/tuner/5-A.mp3",
-	            e6: "https://www.electricherald.com/tuner/6-E.mp3"
+	            playing: false,
+	            notes: ["https://www.electricherald.com/tuner/1-E.mp3", "https://www.electricherald.com/tuner/2-B.mp3", "https://www.electricherald.com/tuner/3-G.mp3", "https://www.electricherald.com/tuner/4-D.mp3", "https://www.electricherald.com/tuner/5-A.mp3", "https://www.electricherald.com/tuner/6-E.mp3"]
 	        };
 	        return _this;
 	    }
@@ -100,16 +100,14 @@
 	                _react2.default.createElement(
 	                    'h1',
 	                    null,
-	                    'Hello tuner!'
+	                    'Guitar Tuner'
 	                ),
-	                _react2.default.createElement(_reactSound2.default, {
-	                    url: this.state.g3,
-	                    playStatus: _reactSound2.default.status.PLAYING
-	                }),
-	                _react2.default.createElement(_reactSound2.default, {
-	                    url: this.state.e1,
-	                    playStatus: _reactSound2.default.status.PLAYING
-	                })
+	                _react2.default.createElement(_GuitarString2.default, { note: "1-E", isPlaying: false }),
+	                _react2.default.createElement(_GuitarString2.default, { note: "2-B", isPlaying: false }),
+	                _react2.default.createElement(_GuitarString2.default, { note: "3-G", isPlaying: false }),
+	                _react2.default.createElement(_GuitarString2.default, { note: "4-D", isPlaying: false }),
+	                _react2.default.createElement(_GuitarString2.default, { note: "5-A", isPlaying: false }),
+	                _react2.default.createElement(_GuitarString2.default, { note: "6-E", isPlaying: false })
 	            );
 	        }
 	    }]);
@@ -21888,7 +21886,7 @@
 	        var _this = _possibleConstructorReturn(this, (Tones.__proto__ || Object.getPrototypeOf(Tones)).call(this, props));
 
 	        _this.state = {
-	            tones: ["https://www.electricherald.com/tuner/1-E.mp3", "https://www.electricherald.com/tuner/2-B.mp3", "https://www.electricherald.com/tuner/3-G.mp3", "https://www.electricherald.com/tuner/4-D.mp3", "https://www.electricherald.com/tuner/5-A.mp3", "https://www.electricherald.com/tuner/6-E.mp3"]
+	            playing: "Sound.status.PLAYING"
 	        };
 
 	        return _this;
@@ -21902,11 +21900,11 @@
 	                { className: 'audiocontainer' },
 	                _react2.default.createElement(_reactSound2.default, {
 	                    url: 'https://www.electricherald.com/tuner/1-E.mp3',
-	                    playStatus: _reactSound2.default.status.PLAYING,
+	                    playStatus: "Sound.status.Playing",
 	                    playFromPosition: 300,
-	                    onLoading: this.handleSongLoading,
-	                    onPlaying: this.handleSongPlaying,
-	                    onFinishedPlaying: this.handleSongFinishedPlaying
+	                    onLoading: console.log("LOADING LOADING LOADING!"),
+	                    onPlaying: console.log("PLAYING PLAYING PLAYING!"),
+	                    onFinishedPlaying: console.log("finished playing")
 	                })
 	            );
 	        }
@@ -23308,6 +23306,97 @@
 		}
 		return module;
 	};
+
+/***/ },
+/* 187 */,
+/* 188 */,
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactSound = __webpack_require__(184);
+
+	var _reactSound2 = _interopRequireDefault(_reactSound);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var GuitarString = function (_React$Component) {
+	    _inherits(GuitarString, _React$Component);
+
+	    function GuitarString(props) {
+	        _classCallCheck(this, GuitarString);
+
+	        var _this = _possibleConstructorReturn(this, (GuitarString.__proto__ || Object.getPrototypeOf(GuitarString)).call(this, props));
+
+	        _this.state = {
+	            playing: _this.props.isPlaying
+	        };
+
+	        _this.playNote = _this.playNote.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(GuitarString, [{
+	        key: 'playNote',
+	        value: function playNote(e) {
+	            e.preventDefault;
+	            this.setState({
+	                playing: true
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+
+	            var playStatus = _reactSound2.default.status.STOPPED;
+
+	            if (this.state.playing === true) {
+	                playStatus = _reactSound2.default.status.PLAYING;
+	            }
+
+	            var play = _reactSound2.default.status.PLAYING;
+	            var stop = _reactSound2.default.status.STOPPED;
+	            var pause = _reactSound2.default.status.PAUSED;
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'form',
+	                    { onSubmit: this.playNote },
+	                    _react2.default.createElement(
+	                        'button',
+	                        null,
+	                        this.props.note
+	                    )
+	                ),
+	                _react2.default.createElement(_reactSound2.default, { className: this.props.note,
+	                    url: 'https://www.electricherald.com/tuner/' + this.props.note + '.mp3',
+	                    playStatus: playStatus,
+
+	                    onLoading: console.log("Loading Loading Loading!"),
+	                    onPlaying: console.log("playing playing playing!")
+	                })
+	            );
+	        }
+	    }]);
+
+	    return GuitarString;
+	}(_react2.default.Component);
+
+	module.exports = GuitarString;
 
 /***/ }
 /******/ ]);

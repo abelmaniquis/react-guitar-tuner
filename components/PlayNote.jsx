@@ -1,0 +1,1 @@
+import Sound from 'react-sound';
