@@ -23352,7 +23352,7 @@
 	    _createClass(GuitarString, [{
 	        key: 'playNote',
 	        value: function playNote(e) {
-	            e.preventDefault;
+	            e.preventDefault();
 	            this.setState({
 	                playing: true
 	            });
@@ -23386,8 +23386,9 @@
 	                    url: 'https://www.electricherald.com/tuner/' + this.props.note + '.mp3',
 	                    playStatus: playStatus,
 
-	                    onLoading: console.log("Loading Loading Loading!"),
-	                    onPlaying: console.log("playing playing playing!")
+	                    onLoading: this.handleSongLoading,
+	                    onPlaying: this.handleSongPlaying
+
 	                })
 	            );
 	        }

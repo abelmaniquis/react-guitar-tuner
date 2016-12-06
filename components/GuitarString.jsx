@@ -11,7 +11,7 @@ class GuitarString extends React.Component{
         this.playNote = this.playNote.bind(this)
     }
     playNote(e){
-     e.preventDefault
+     e.preventDefault();
      this.setState({
          playing:true
      })
@@ -37,8 +37,9 @@ class GuitarString extends React.Component{
             url={`https://www.electricherald.com/tuner/${this.props.note}.mp3`}
             playStatus={playStatus}
             
-            onLoading={console.log("Loading Loading Loading!")}
-            onPlaying={console.log("playing playing playing!")}
+            onLoading={this.handleSongLoading}
+            onPlaying={this.handleSongPlaying}
+            
             />
             
             
