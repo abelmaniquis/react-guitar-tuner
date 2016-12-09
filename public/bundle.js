@@ -56,11 +56,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactSound = __webpack_require__(184);
+	var _reactSound = __webpack_require__(183);
 
 	var _reactSound2 = _interopRequireDefault(_reactSound);
 
-	var _GuitarString = __webpack_require__(189);
+	var _GuitarString = __webpack_require__(186);
 
 	var _GuitarString2 = _interopRequireDefault(_GuitarString);
 
@@ -75,16 +75,10 @@
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
 
-	    function App(props) {
+	    function App() {
 	        _classCallCheck(this, App);
 
-	        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-	        _this.state = {
-	            playing: false,
-	            notes: ["https://www.electricherald.com/tuner/1-E.mp3", "https://www.electricherald.com/tuner/2-B.mp3", "https://www.electricherald.com/tuner/3-G.mp3", "https://www.electricherald.com/tuner/4-D.mp3", "https://www.electricherald.com/tuner/5-A.mp3", "https://www.electricherald.com/tuner/6-E.mp3"]
-	        };
-	        return _this;
+	        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
 	    }
 
 	    _createClass(App, [{
@@ -93,11 +87,6 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
-	                    'h1',
-	                    { className: 'title' },
-	                    'Guitar Tuner'
-	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'fretboard' },
@@ -21878,8 +21867,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 183 */,
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21940,7 +21928,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _soundmanager2 = __webpack_require__(185);
+	var _soundmanager2 = __webpack_require__(184);
 
 	var pendingCalls = [];
 	var initialized = false;
@@ -22150,7 +22138,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {'use strict';var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};/** @license
@@ -23240,10 +23228,10 @@
 	 * Flash may not always be needed, but this is not known until async init and SM2 may even "reboot" into Flash mode.
 	 */// public API, flash callbacks etc.
 	window.soundManager=soundManager;})(window);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185)(module)))
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -23260,9 +23248,7 @@
 	};
 
 /***/ },
-/* 187 */,
-/* 188 */,
-/* 189 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23273,7 +23259,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactSound = __webpack_require__(184);
+	var _reactSound = __webpack_require__(183);
 
 	var _reactSound2 = _interopRequireDefault(_reactSound);
 
