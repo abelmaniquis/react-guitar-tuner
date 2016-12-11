@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Sound from 'react-sound';
+import MidiTest from './MidiTest.jsx';
 import GuitarString from './GuitarString.jsx';
 
 class App extends React.Component{
@@ -18,6 +19,7 @@ class App extends React.Component{
                 <li><GuitarString note={"6-E"} isPlaying={false}/></li>
             </ul>
             </div>
+            <MidiTest/>
         </div>
         )
     }
