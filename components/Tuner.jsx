@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sound from 'react-sound';
 import GuitarString from './GuitarString.jsx';
 
 const App = () =>{
@@ -17,7 +16,7 @@ const App = () =>{
             </ul>
             </div>
         </div>
-        )
-}
+        );
+};
 
-ReactDOM.render(<App/>,document.getElementById('app'))
+ReactDOM.render(<App/>,document.getElementById('app'));

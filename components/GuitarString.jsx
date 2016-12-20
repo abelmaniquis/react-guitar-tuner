@@ -1,31 +1,29 @@
-import React from 'react'
-import Sound from 'react-sound'
+import React from 'react';
+import Sound from 'react-sound';
 
 class GuitarString extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        
         this.state={
          playing:this.props.isPlaying  
-        }
-        this.playNote = this.playNote.bind(this)
+        };
+        this.playNote = this.playNote.bind(this);
     }
     playNote(e){
      e.preventDefault();
      this.setState({
          playing:true
-     })
+     });
     }
     render(){
         
-        var playStatus = Sound.status.STOPPED
+        var playStatus = Sound.status.STOPPED;
         
         if(this.state.playing === true){
-            playStatus = Sound.status.PLAYING
+            playStatus = Sound.status.PLAYING;
         }
         
-        var play = Sound.status.PLAYING
-        var stop = Sound.status.STOPPED
-        var pause = Sound.status.PAUSED
         return(
             <div>
             <form onSubmit={this.playNote}>
@@ -36,9 +34,8 @@ class GuitarString extends React.Component{
             playStatus={playStatus}
             />
             </div>
-        )
+        );
     }
 }
-//`https://www.electricherald.com/tuner/${this.props.note}.mp3`
 
-module.exports = GuitarString
+module.exports = GuitarString;

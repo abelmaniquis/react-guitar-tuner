@@ -54,10 +54,6 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactSound = __webpack_require__(183);
-
-	var _reactSound2 = _interopRequireDefault(_reactSound);
-
 	var _GuitarString = __webpack_require__(186);
 
 	var _GuitarString2 = _interopRequireDefault(_GuitarString);
@@ -28260,9 +28256,6 @@
 	                playStatus = _reactSound2.default.status.PLAYING;
 	            }
 
-	            var play = _reactSound2.default.status.PLAYING;
-	            var stop = _reactSound2.default.status.STOPPED;
-	            var pause = _reactSound2.default.status.PAUSED;
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -28281,7 +28274,6 @@
 
 	    return GuitarString;
 	}(_react2.default.Component);
-	//`https://www.electricherald.com/tuner/${this.props.note}.mp3`
 
 	module.exports = GuitarString;
 
