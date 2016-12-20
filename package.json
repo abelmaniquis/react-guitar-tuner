@@ -7,11 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch-sass": "sass --watch public/style.sass",
-    "watch": "webpack --watch && sass --watch public/style.sass"
+    "watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
@@ -21,6 +22,7 @@
     "babel-register": "^6.18.0",
     "midi-writer-js": "^1.4.0",
     "react": "^15.4.1",
+    "react-anime": "^0.3.4",
     "react-dom": "^15.4.1",
     "react-sound": "^0.5.2",
     "webpack": "^1.13.3"

@@ -29,9 +29,8 @@ class GuitarString extends React.Component{
         return(
             <div>
             <form onSubmit={this.playNote}>
-                <button className="string"/>
+                <button id={this.props.note} className="string"/>
             </form>
-            
             <Sound className={this.props.note}
             url={`https://www.electricherald.com/tuner/${this.props.note}.mp3`}
             playStatus={playStatus}
@@ -40,5 +39,6 @@ class GuitarString extends React.Component{
         )
     }
 }
+//`https://www.electricherald.com/tuner/${this.props.note}.mp3`
 
 module.exports = GuitarString

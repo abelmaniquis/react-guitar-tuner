@@ -1,18 +1,42 @@
+html {
+  background: #18212D; }
+
 body {
   font-family: Helvetica;
   text-align: center;
   color: #990000; }
 
+.fretBoard {
+  margin-top: 15em; }
+
 .string {
-  background-color: #808080;
-  margin-top: 40px;
-  padding: 1px 100%;
-  border: none;
-  display: inline-block;
+  height: 5em;
+  width: 5em;
+  margin-left: 2em;
+  border-radius: 100%;
   cursor: pointer;
-  length: 100%; }
+  color: rebeccapurple; }
 
 li {
-  list-style-type: none; }
+  list-style-type: none;
+  display: inline-block; }
+
+#6-E {
+  background-color: red; }
+
+#5-A {
+  background-color: orange; }
+
+#4-D {
+  background-color: yellow; }
+
+#3-G {
+  background-color: green; }
+
+#2-B {
+  background-color: blue; }
+
+#1-E {
+  background-color: purple; }
 
 /*# sourceMappingURL=style.css.map */
