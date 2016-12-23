@@ -6,18 +6,19 @@ class GuitarString extends React.Component{
         super(props);
         
         this.state={
-         playing:this.props.isPlaying  
+         playing:this.props.isPlaying
         };
         this.playNote = this.playNote.bind(this);
     }
     playNote(e){
      e.preventDefault();
+     
      this.setState({
          playing:true
      });
+     
     }
     render(){
-        
         var playStatus = Sound.status.STOPPED;
         
         if(this.state.playing === true){
@@ -27,11 +28,12 @@ class GuitarString extends React.Component{
         return(
             <div>
             <form onSubmit={this.playNote}>
-                <button id={this.props.note} className="string"/>
+                <button id={this.props.note[2]} className="string"/>
             </form>
+            
             <Sound className={this.props.note}
-            url={`https://www.electricherald.com/tuner/${this.props.note}.mp3`}
-            playStatus={playStatus}
+                url={`https://www.electricherald.com/tuner/${this.props.note}.mp3`}
+                playStatus={playStatus}
             />
             </div>
         );

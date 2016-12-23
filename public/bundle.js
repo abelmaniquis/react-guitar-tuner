@@ -54,7 +54,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _GuitarString = __webpack_require__(186);
+	var _GuitarString = __webpack_require__(183);
 
 	var _GuitarString2 = _interopRequireDefault(_GuitarString);
 
@@ -21845,6 +21845,84 @@
 
 	'use strict';
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactSound = __webpack_require__(184);
+
+	var _reactSound2 = _interopRequireDefault(_reactSound);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var GuitarString = function (_React$Component) {
+	    _inherits(GuitarString, _React$Component);
+
+	    function GuitarString(props) {
+	        _classCallCheck(this, GuitarString);
+
+	        var _this = _possibleConstructorReturn(this, (GuitarString.__proto__ || Object.getPrototypeOf(GuitarString)).call(this, props));
+
+	        _this.state = {
+	            playing: _this.props.isPlaying
+	        };
+	        _this.playNote = _this.playNote.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(GuitarString, [{
+	        key: 'playNote',
+	        value: function playNote(e) {
+	            e.preventDefault();
+
+	            this.setState({
+	                playing: true
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var playStatus = _reactSound2.default.status.STOPPED;
+
+	            if (this.state.playing === true) {
+	                playStatus = _reactSound2.default.status.PLAYING;
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'form',
+	                    { onSubmit: this.playNote },
+	                    _react2.default.createElement('button', { id: this.props.note[2], className: 'string' })
+	                ),
+	                _react2.default.createElement(_reactSound2.default, { className: this.props.note,
+	                    url: 'https://www.electricherald.com/tuner/' + this.props.note + '.mp3',
+	                    playStatus: playStatus
+	                })
+	            );
+	        }
+	    }]);
+
+	    return GuitarString;
+	}(_react2.default.Component);
+
+	module.exports = GuitarString;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	Object.defineProperty(exports, '__esModule', {
@@ -21901,7 +21979,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _soundmanager2 = __webpack_require__(184);
+	var _soundmanager2 = __webpack_require__(185);
 
 	var pendingCalls = [];
 	var initialized = false;
@@ -22111,7 +22189,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {'use strict';
@@ -28180,10 +28258,10 @@
 	  // public API, flash callbacks etc.
 	  window.soundManager = soundManager;
 	})(window);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)(module)))
 
 /***/ },
-/* 185 */
+/* 186 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28198,84 +28276,6 @@
 		}
 		return module;
 	};
-
-/***/ },
-/* 186 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactSound = __webpack_require__(183);
-
-	var _reactSound2 = _interopRequireDefault(_reactSound);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var GuitarString = function (_React$Component) {
-	    _inherits(GuitarString, _React$Component);
-
-	    function GuitarString(props) {
-	        _classCallCheck(this, GuitarString);
-
-	        var _this = _possibleConstructorReturn(this, (GuitarString.__proto__ || Object.getPrototypeOf(GuitarString)).call(this, props));
-
-	        _this.state = {
-	            playing: _this.props.isPlaying
-	        };
-	        _this.playNote = _this.playNote.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(GuitarString, [{
-	        key: 'playNote',
-	        value: function playNote(e) {
-	            e.preventDefault();
-	            this.setState({
-	                playing: true
-	            });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-
-	            var playStatus = _reactSound2.default.status.STOPPED;
-
-	            if (this.state.playing === true) {
-	                playStatus = _reactSound2.default.status.PLAYING;
-	            }
-
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'form',
-	                    { onSubmit: this.playNote },
-	                    _react2.default.createElement('button', { id: this.props.note, className: 'string' })
-	                ),
-	                _react2.default.createElement(_reactSound2.default, { className: this.props.note,
-	                    url: 'https://www.electricherald.com/tuner/' + this.props.note + '.mp3',
-	                    playStatus: playStatus
-	                })
-	            );
-	        }
-	    }]);
-
-	    return GuitarString;
-	}(_react2.default.Component);
-
-	module.exports = GuitarString;
 
 /***/ }
 /******/ ]);

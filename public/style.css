@@ -15,28 +15,28 @@ body {
   margin-left: 2em;
   border-radius: 100%;
   cursor: pointer;
-  color: rebeccapurple; }
+  background-color: rebeccapurple; }
 
 li {
   list-style-type: none;
   display: inline-block; }
 
-#6-E {
+#E {
   background-color: red; }
 
-#5-A {
+#A {
   background-color: orange; }
 
-#4-D {
+#D {
   background-color: yellow; }
 
-#3-G {
+#G {
   background-color: green; }
 
-#2-B {
+#B {
   background-color: blue; }
 
-#1-E {
+#E {
   background-color: purple; }
 
 /*# sourceMappingURL=style.css.map */
