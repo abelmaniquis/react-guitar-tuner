@@ -21915,6 +21915,10 @@
 	    return GuitarString;
 	}(_react2.default.Component);
 
+	GuitarString.propTypes = {
+	    note: _react2.default.PropTypes.string
+	};
+
 	module.exports = GuitarString;
 
 /***/ },

@@ -4,7 +4,6 @@ import Sound from 'react-sound';
 class GuitarString extends React.Component{
     constructor(props){
         super(props);
-        
         this.state={
          playing:this.props.isPlaying
         };
@@ -38,6 +37,10 @@ class GuitarString extends React.Component{
             </div>
         );
     }
+}
+
+GuitarString.propTypes = {
+    note: React.PropTypes.string
 }
 
 module.exports = GuitarString;
